@@ -10,7 +10,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"workspaceContains:$tf/"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -27,6 +27,9 @@
 		"watch": "tsc -watch -p ./",
 		"postinstall": "node ./node_modules/vscode/bin/install",
 		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"dependencies": {
+		"ms-vsts.team": "^1.149.2"
 	},
 	"devDependencies": {
 		"typescript": "^3.3.1",
